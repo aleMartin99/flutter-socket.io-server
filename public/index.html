@@ -29,6 +29,15 @@
             console.log("Listening:",payload);
         })
 
+        socket.on('nuevo-mensaje',function(payload)
+        {console.log("Message from flutter app",payload)}
+        )
+
+        socket.on('active-bands', function(bands){
+            console.clear();
+            console.table(bands);
+        })
+
     </script>
 </body>
 </html>
